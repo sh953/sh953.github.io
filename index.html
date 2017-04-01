@@ -6,6 +6,7 @@
 <script>
 
 var i, action, log = [];
+var combined = new JSONObject();
 
 $(function(){
 	require(['account'], function (account) {
@@ -31,6 +32,7 @@ function accountDemo (apikey, account) {
 	var currentdate = new Date();
 
 	action.time = currentdate.getHours() + ":" + currentdate.getMinutes();
+
 	log.push(action);
 	console.log(log);
 
