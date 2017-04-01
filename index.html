@@ -16,7 +16,7 @@ $(function(){
 function accountDemo (apikey, account) {
 	console.log('Account Demo');
 	var custAccount = account.initWithKey(apikey);
-	console.log("[Account - Get All] : Sample Account Nickname: (" + custAccount.getAllAccounts()[0].nickname + ")");
+	console.log("[Account - Get All] : Sample Account Nickname: (" + custAccount.getAllAccounts() + ")");
 }
 
 
