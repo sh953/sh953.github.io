@@ -4,11 +4,16 @@
 <script>
 
 var request = new XMLHttpRequest();
-var params = "action=something";
-request.open('GET', 'api.reimaginebanking.com/tms?key=0811b32a7ccc43770811ea835125502b', true);
-request.onreadystatechange = function() {
-	console.log("whooo");
-}
+request.open('GET', 'api.reimaginebanking.com/atms?key=0811b32a7ccc43770811ea835125502b', true);
+request.send( null );
+console.log(request.responseText);
+
+
+
+
+
+
+
 </script>
 </body>
 </html>
