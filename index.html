@@ -3,11 +3,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script>
 $.ajax({
-    url: '/https://runm-central.att.io/131fb3ec03295/3dbd9f0788fb/4063b4d6c0067c2/in/flow/get',   
-	crossDomain: true,
-	header: "GET /",
-	success: function(results){
-        console.log("results.response");
+    url: 'api.reimaginebanking.com/atms?key=your_key',
+    header:"GET /",
+    success: function(results){
+        //do something 
     }
 });
 </script>
