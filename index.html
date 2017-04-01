@@ -1,14 +1,44 @@
 <html>
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script data-main="lib/capital_one" src="lib/require-jquery.js"></script>
+
 <script>
-$.ajax({
-    url: 'atms?key=0811b32a7ccc43770811ea835125502b',
-    header:"GET /api.reimaginebanking.com",
-    success: function(results){
-        //do something 
-    }
-});
+
+var i, action, log = [];
+
+$(function(){
+	require(['account'], function (account) {
+		var apikey = '0811b32a7ccc43770811ea835125502b';
+		accountDemo(apikey, account);
+	});
+});	
+
+window.setInterval(function(){
+  	$(function(){
+		require(['account'], function (account) {
+			var apikey = '0811b32a7ccc43770811ea835125502b';
+			accountDemo(apikey, account);
+		});
+	});
+}, 30000);
+
+
+function accountDemo (apikey, account) {
+	var custAccount = account.initWithKey(apikey);
+	action = {balance:0,time:0};
+	action.balance = custAccount.getAllAccounts()[1].balance;
+	var currentdate = new Date();
+
+	action.time = currentdate.getHours() + ":" + currentdate.getMinutes();
+	log.push(action);
+	console.log(log);
+
+}
+
+
+
+ 	
 </script>
 </body>
 </html>
