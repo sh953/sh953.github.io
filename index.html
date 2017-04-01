@@ -2,13 +2,13 @@
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script>
-$.ajax({
-    url: 'api.reimaginebanking.com/tms?key=0811b32a7ccc43770811ea835125502b',
-    success: function(results){
-        console.log(results);
-	    //do something 
-    }
-});
+
+var request = new XMLHttpRequest();
+var params = "action=something";
+request.open('GET', 'api.reimaginebanking.com/tms?key=0811b32a7ccc43770811ea835125502b', true);
+request.onreadystatechange = function() {
+	console.log("whooo");
+}
 </script>
 </body>
 </html>
