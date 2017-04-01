@@ -5,7 +5,8 @@
 $.ajax({
     url: '/https://runm-central.att.io/131fb3ec03295/3dbd9f0788fb/4063b4d6c0067c2/in/flow/get',   
 	crossDomain: true,
-    success: function(results){
+	header: "GET /",
+	success: function(results){
         console.log("results.response");
     }
 });
