@@ -1,19 +1,27 @@
 <html>
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script data-main="lib/capital_one" src="lib/require-jquery.js"></script>
+
 <script>
 
-var request = new XMLHttpRequest();
-request.open('GET', 'api.reimaginebanking.com/atms?key=0811b32a7ccc43770811ea835125502b', true);
-request.send( null );
-console.log(request.responseText);
+$(function(){
+	require(['account'], function (account) {
+		var apikey = '0811b32a7ccc43770811ea835125502b';
+		accountDemo(apikey, account);
+	});
+});
+
+
+function accountDemo (apikey, account) {
+	console.log('Account Demo');
+	var custAccount = account.initWithKey(apikey);
+	console.log("[Account - Get All] : Sample Account Nickname: (" + custAccount.getAllAccounts()[0].nickname + ")");
+}
 
 
 
-
-
-
-
+ 	
 </script>
 </body>
 </html>
