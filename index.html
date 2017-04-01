@@ -5,8 +5,8 @@
 
 <script>
 
-var i, action, log = [];
-var combined = new JSONObject();
+var i, action = {}, log = [];
+
 
 $(function(){
 	require(['account'], function (account) {
@@ -27,15 +27,11 @@ window.setInterval(function(){
 
 function accountDemo (apikey, account) {
 	var custAccount = account.initWithKey(apikey);
-	action = {balance:0,time:0};
-	action.balance = custAccount.getAllAccounts()[1].balance;
 	var currentdate = new Date();
-
-	action.time = currentdate.getHours() + ":" + currentdate.getMinutes();
-
+	action["time"] = currentdate.getHours() + ":" + currentdate.getMinutes();
+   	action["balance"] = custAccount.getAllAccounts()[1].balance;
 	log.push(action);
 	console.log(log);
-
 }
 
 
