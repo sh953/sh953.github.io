@@ -40,6 +40,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script data-main="lib/capital_one" src="lib/require-jquery.js"></script>
 
+    <script src="https://m2x.att.com/widgets.js" async></script>
+
 
 <script type="text/javascript">
   FusionCharts.ready(function(){
@@ -555,43 +557,31 @@ FusionCharts.ready(function () {
 
       </ul>
       <!--END ul-->
-    </div>
-        <div class="portfolio-container" id="columns">
+    
+    <!--END portfolio-wrap-->
+  
+    </section>
         <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 color="green" class="section-heading">Your Utilities</h2>
                     <hr>
                 </div>
-            </div>
         <ul>
         <li class="one-half web">
           <p> <a title="Caption Text" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto">
             <div id = "chartContainer5">
             </div>
           </a> </p>
-          <h4 align="center"><a href="#">Your balance</a></h4>
-          <p align="center"> Your personal balance sheet is -6.51k since last year </p>
-        </li>
-        <li class="one-half logos">
-          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto">
-            <div id = "chartContainer6">
-              </div>
-            </a> </p>
-          <h4 align="center"><a href="#">Your Purchase Selection</a></h4>
-          <p align="center"> You spent 49% of your income on food last year. The national average is 28%. Consider trying to save money on food. </p>
-        </li>
+          <div  style="text-align: center">
+            <div class="att-m2x-widget" data-widget-url="http://api-m2x.att.com/v2/widgets/86ec4276" data-width="1000" data-height="650" data-m2x-key="8dba5086ac73d474ee70838a5f4f2553"></div>
+            <div class="att-m2x-widget" data-widget-url="http://api-m2x.att.com/v2/widgets/61dd8e3e" data-width="1000" data-height="650" data-m2x-key="dccd74ae4d959649de4b9d3ec56a5795"></div>
+        </div>        
+         </li>
+
+
         </ul>
     <!--END portfolio-wrap-->
-  </div>
-  <div style="clear:both; height: 40px"></div>
-</div>
-    </section>
-
-    <div class="att-m2x-widget" data-widget-url="http://api-m2x.att.com/v2/widgets/6d0c5350" data-width="400" data-height="260" data-type="sum" data-m2x-key="d0f237c00a15b8624ab4a527656387e5">
-        
     </div>
-<!-- Include the following script tag only once per page -->
-<script src="https://m2x.att.com/widgets.js" async></script>
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
