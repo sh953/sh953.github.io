@@ -24,7 +24,10 @@
 
     <!-- Theme CSS -->
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/creative.css" rel="stylesheet">
+    <link href="css/creative2.css" rel="stylesheet">
+
+    <script type="text/javascript" src="./fusioncharts-suite-xt/js/fusioncharts.js"></script>
+    <script type="text/javascript" src="./fusioncharts-suite-xt/js/themes/fusioncharts.theme.fint.js"></script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -33,6 +36,444 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script data-main="lib/capital_one" src="lib/require-jquery.js"></script>
+
+
+<script type="text/javascript">
+  FusionCharts.ready(function(){
+    var revenueChart = new FusionCharts({
+        "type": "column2d",
+        "renderAt": "chartContainer1",
+        "width": "500",
+        "height": "300",
+        "dataFormat": "json",
+        "dataSource":  {
+          "chart": {
+            "caption": "Your Balance",
+            "subCaption": "2016-2017",
+            "xAxisName": "Month",
+            "yAxisName": "Balance (In USD)",
+            "theme": "fint"
+         },
+         "data":[
+            {
+               "label": "Apr",
+               "value": "22143"
+            },
+            {
+               "label": "May",
+               "value": "19123"
+            },
+            {
+               "label": "Jun",
+               "value": "18643"
+            },
+            {
+               "label": "Jul",
+               "value": "15764"
+            },
+            {
+               "label": "Aug",
+               "value": "24236"
+            },
+            {
+               "label": "Sep",
+               "value": "22910"
+            },
+            {
+               "label": "Oct",
+               "value": "20198"
+            },
+            {
+               "label": "Nov",
+               "value": "25675"
+            },
+            {
+               "label": "Dec",
+               "value": "23214"
+            },
+            {
+               "label": "Jan",
+               "value": "19234"
+            },
+            {
+               "label": "Feb",
+               "value": "17782"
+            },
+            {
+               "label": "Mar",
+               "value": "15634"
+            }
+          ]
+      }
+
+  });
+revenueChart.render();
+})
+</script>
+
+<script>
+FusionCharts.ready(function () {
+    var revenueChart = new FusionCharts({
+        type: 'doughnut3d',
+        renderAt: 'chartContainer2',
+        width: '500',
+        height: '300',
+        dataFormat: 'json',
+        dataSource: {
+            "chart": {
+                "caption": "Split of Spending by Product Categories",
+                "subCaption": "Apr 2016-Mar 2017",
+                "numberPrefix": "$",
+                "paletteColors": "#0075c2,#1aaf5d,#f2c500,#f45b00,#8e0000",
+                "bgColor": "#ffffff",
+                "showBorder": "0",
+                "use3DLighting": "0",
+                "showShadow": "0",
+                "enableSmartLabels": "0",
+                "startingAngle": "310",
+                "showLabels": "0",
+                "showPercentValues": "1",
+                "showLegend": "1",
+                "legendShadow": "0",
+                "legendBorderAlpha": "0",                                
+                "decimals": "0",
+                "captionFontSize": "14",
+                "subcaptionFontSize": "14",
+                "subcaptionFontBold": "0",
+                "toolTipColor": "#ffffff",
+                "toolTipBorderThickness": "0",
+                "toolTipBgColor": "#000000",
+                "toolTipBgAlpha": "80",
+                "toolTipBorderRadius": "2",
+                "toolTipPadding": "5",
+            },
+            "data": [
+                {
+                    "label": "Food",
+                    "value": "28504"
+                }, 
+                {
+                    "label": "Apparels",
+                    "value": "14633"
+                }, 
+                {
+                    "label": "Electronics",
+                    "value": "10507"
+                }, 
+                {
+                    "label": "Household",
+                    "value": "4910"
+                }
+            ]
+        }
+    }).render();
+});
+</script>
+
+<script>
+FusionCharts.ready(function () {
+    var conversionChart = new FusionCharts({
+        type: 'bubble',
+        renderAt: 'chartContainer3',
+        width: '500',
+        height: '300',
+        dataFormat: 'json',
+        dataSource: {
+            "chart": {
+                "caption": "Price of purchase vs Units Purchased",
+                "subcaption": "Mar 2017",
+                "xAxisMinValue": "0",
+                "xAxisMaxValue": "100",
+                "yAxisMinValue": "0",
+                "yAxisMaxValue": "20",
+                "plotFillAlpha": "70",
+                "plotFillHoverColor": "#6baa01",
+                "showPlotBorder": "0",
+                "xAxisName": "Units Purchased",
+                "yAxisName": "Price of Product",
+                "numDivlines": "2",
+                "showValues":"1",
+                "showTrendlineLabels": "0",
+                "plotTooltext": "$name : Total Units Purchased - $zvalue",
+                "drawQuadrant" : "1",
+                "quadrantLineAlpha" : "80",
+                "quadrantLineThickness" : "3",
+                "quadrantXVal" : "50",
+                "quadrantYVal": "10",
+                //Quadrant Labels
+                "quadrantLabelTL": "Low Price / Many Purchased",
+                "quadrantLabelTR": "High Price / Many Purchased",
+                "quadrantLabelBL": "Low Price / Few Purchased",
+                "quadrantLabelBR": "High Price / Few Purchased",
+                  
+                //Cosmetics
+                "baseFontColor" : "#333333",
+                "baseFont" : "Helvetica Neue,Arial",
+                "captionFontSize" : "14",
+                "subcaptionFontSize" : "14",
+                "subcaptionFontBold" : "0",
+                "showBorder" : "0",
+                "bgColor" : "#ffffff",
+                "showShadow" : "0",
+                "canvasBgColor" : "#ffffff",
+                "canvasBorderAlpha" : "0",
+                "divlineAlpha" : "100",
+                "divlineColor" : "#999999",
+                "divlineThickness" : "1",
+                "divLineIsDashed" : "1",
+                "divLineDashLen" : "1",
+                "divLineGapLen" : "1",
+                "use3dlighting" : "0",
+                "showplotborder" : "0",
+                "showYAxisLine" : "1",
+                "yAxisLineThickness" : "1",
+                "yAxisLineColor" : "#999999",
+                "showXAxisLine" : "1",
+                "xAxisLineThickness" : "1",
+                "xAxisLineColor" : "#999999",
+                "showAlternateHGridColor" : "0",
+                "showAlternateVGridColor" : "0"
+                
+            },
+            "categories": [
+                {
+                    "category": [
+                        {
+                            "label": "$0",
+                            "x": "0"
+                        }, 
+                        {
+                            "label": "$20",
+                            "x": "20",
+                            "showverticalline": "1"
+                        }, 
+                        {
+                            "label": "$40",
+                            "x": "40",
+                            "showverticalline": "1"
+                        }, 
+                        {
+                            "label": "$60",
+                            "x": "60",
+                            "showverticalline": "1"
+                        }, 
+                        {
+                            "label": "$80",
+                            "x": "80",
+                            "showverticalline": "1"
+                        }, {
+                            "label": "$100",
+                            "x": "100",
+                            "showverticalline": "1"
+                        }
+                    ]
+                }
+            ],
+            "dataset": [
+                {
+                    "color":"#00aee4",
+                    "data": [
+                        {
+                            "x": "80",
+                            "y": "5",
+                            "z": "6",
+                            "name": "Electronics"
+                        }, 
+                        {
+                            "x": "60",
+                            "y": "10",
+                            "z": "20",
+                            "name": "Apparels"
+                        }, 
+                        {
+                            "x": "50",
+                            "y": "15",
+                            "z": "50",
+                            "name": "Food"
+                        }, 
+                        {
+                            "x": "32",
+                            "y": "5",
+                            "z": "15",
+                            "name": "Household"
+                        }, 
+                    ]
+                }
+            ],
+            "trendlines": [
+                {
+                    "line": [
+                        {
+                            "startValue": "5",
+                            "endValue": "10",
+                            "isTrendZone": "1",
+                            "color": "#aaaaaa",
+                            "alpha": "14"
+                        }, 
+                        {
+                            "startValue": "10",
+                            "endValue": "20",
+                            "isTrendZone": "1",
+                            "color": "#aaaaaa",
+                            "alpha": "7"
+                        }
+                    ]
+                }
+            ],
+            "vTrendlines": [
+                {
+                    "line": [
+                        {
+                            "startValue": "44",
+                            "isTrendZone": "0",
+                            "color": "#0066cc",
+                            "thickness" : "1",
+                            "dashed" : "1",
+                            "displayValue": "Gross Avg."
+                        }
+                    ]
+                }
+            ]
+        }
+    });
+    conversionChart.render();
+});
+</script>
+
+<script>
+  FusionCharts.ready(function () {
+    var revenueChart = new FusionCharts({
+        type: 'mscombidy2d',
+        renderAt: 'chartContainer4',
+        width: '500',
+        height: '300',
+        dataFormat: 'json',
+        dataSource: {
+            "chart": {
+                "caption": "Revenues and Profits",
+                "subCaption": "Apr 2016-Mar 2017",
+                "xAxisname": "Month",
+                "pYAxisName": "Amount (In USD)",
+                "sYAxisName": "Profit %",
+                "numberPrefix": "$",
+                "sNumberSuffix" : "%",
+                "sYAxisMaxValue" : "50",
+
+                //Cosmetics
+                "paletteColors" : "#0075c2,#1aaf5d,#f2c500",
+                "baseFontColor" : "#333333",
+                "baseFont" : "Helvetica Neue,Arial",
+                "captionFontSize" : "14",
+                "subcaptionFontSize" : "14",
+                "subcaptionFontBold" : "0",
+                "showBorder" : "0",
+                "bgColor" : "#ffffff",
+                "showShadow" : "0",
+                "canvasBgColor" : "#ffffff",
+                "canvasBorderAlpha" : "0",
+                "divlineAlpha" : "100",
+                "divlineColor" : "#999999",
+                "divlineThickness" : "1",
+                "divLineIsDashed" : "1",
+                "divLineDashLen" : "1",
+                "divLineGapLen" : "1",
+                "usePlotGradientColor" : "0",
+                "showplotborder" : "0",
+                "showXAxisLine" : "1",
+                "xAxisLineThickness" : "1",
+                "xAxisLineColor" : "#999999",
+                "showAlternateHGridColor" : "0",
+                "showAlternateVGridColor" : "0",
+                "legendBgAlpha" : "0",
+                "legendBorderAlpha" : "0",
+                "legendShadow" : "0",
+                "legendItemFontSize" : "10",
+                "legendItemFontColor" : "#666666"
+            },
+            "categories": [{
+                "category": [
+                    { "label": "Jan" }, 
+                    { "label": "Feb" }, 
+                    { "label": "Mar" }, 
+                    { "label": "Apr" }, 
+                    { "label": "May" }, 
+                    { "label": "Jun" }, 
+                    { "label": "Jul" }, 
+                    { "label": "Aug" }, 
+                    { "label": "Sep" }, 
+                    { "label": "Oct" }, 
+                    { "label": "Nov" }, 
+                    { "label": "Dec" }
+                ]
+            }
+                          ],
+            "dataset": [
+                {
+                    "seriesName": "Revenues",
+                    "data": [
+                        { "value" : "16000" },
+                        { "value" : "20000" },
+                        { "value" : "18000" },
+                        { "value" : "19000" },
+                        { "value" : "15000" },
+                        { "value" : "21000" },
+                        { "value" : "16000" },
+                        { "value" : "20000" },
+                        { "value" : "17000" },
+                        { "value" : "22000" },
+                        { "value" : "19000" },
+                        { "value" : "23000" }
+                    ]
+                }, 
+                {
+                    "seriesName": "Profits",
+                    "renderAs": "area",
+                    "showValues": "0",
+                    "data": [
+                        { "value" : "4000" },
+                        { "value" : "5000" },
+                        { "value" : "3000" },
+                        { "value" : "4000" },
+                        { "value" : "1000" },
+                        { "value" : "7000" },
+                        { "value" : "1000" },
+                        { "value" : "4000" },
+                        { "value" : "1000" },
+                        { "value" : "8000" },
+                        { "value" : "2000" },
+                        { "value" : "7000" }
+                    ]
+                }, 
+                {
+                    "seriesName": "Profit %",
+                    "parentYAxis": "S",
+                    "renderAs": "line",
+                    "showValues": "0",
+                    "data": [
+                        { "value" : "25" },
+                        { "value" : "25" },
+                        { "value" : "16.66" },
+                        { "value" : "21.05" },
+                        { "value" : "6.66" },
+                        { "value" : "33.33" },
+                        { "value" : "6.25" },
+                        { "value" : "25" },
+                        { "value" : "5.88" },
+                        { "value" : "36.36" },
+                        { "value" : "10.52" },
+                        { "value" : "30.43"}
+                    ]
+                }
+            ]
+        }
+    });
+    
+    revenueChart.render();
+});
+</script>
 
 </head>
 
@@ -45,14 +486,14 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Home</a>
+                <a class="navbar-brand page-scroll" href="./index.html">Home</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#services">Account</a>
+                        <a class="page-scroll" href="#portfolio">Account</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#about">About</a>
@@ -67,93 +508,51 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <header>
-        <div class = "other">
-            <div class="header-content">
-                <div class="header-content-inner">
-                 <h1 id="homeHeading">Budget Time to Fix your Budget</h1>
-                    <p>Keep track of the money you spend whenever you browse the web!</p>
-                    <a href="#about" class="btn btn-primary btn-xl page-scroll">Start Now</a>
-             </div>
-            </div>
-        </div>
-    </header>
-
-<div id="container">
+    <section id = "random">
+        <div id="container">
   <div id="portfolio">
-    <ul id="filterable">
-      <li class="first">
-        <h5>Sort by:</h5>
-      </li>
-      <li class="current"><a class="all" href="#all">All</a></li>
-      <li><a class="web" href="#web">Webdesign</a></li>
-      <li><a class="logos" href="#logos">Logo</a></li>
-      <li><a class="branding" href="#branding">Branding</a></li>
-      <li><a class="video" href="#video">Video</a></li>
-    </ul>
     <!--END filtering-nav-->
     <div class="portfolio-container" id="columns">
+        <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 color="green" class="section-heading">Ashton Schiller</h2>
+                    <hr>
+                </div>
+            </div>
       <ul>
-        <li class="one-fourth web">
-          <p> <a title="Caption Text" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto"><img src="img/portfolio/portfolio-img-01.jpg" alt="" width="210" height="145" class="portfolio-img pretty-box"></a> </p>
-          <h4><a href="#">Worpdress Design</a></h4>
-          <p> Lorem ipsum dolor sit amet, tollite fit manibus individuationis omnibus civitas ad quia. </p>
+        <li class="one-half web">
+          <p> <a title="Caption Text" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto">
+            <div id = "chartContainer1">
+            </div>
+          </a> </p>
+          <h4 align="center"><a href="#">Your balance</a></h4>
+          <p align="center"> Your personal balance sheet is -6.51k since last year </p>
         </li>
-        <li class="one-fourth logos">
-          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto"><img src="img/portfolio/portfolio-img-01.jpg" alt="" width="210" height="145" class="portfolio-img pretty-box"></a> </p>
-          <h4><a href="#">Logo Design</a></h4>
-          <p> Lorem ipsum dolor sit amet, tollite fit manibus individuationis omnibus civitas ad quia. </p>
+        <li class="one-half logos">
+          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto">
+            <div id = "chartContainer2">
+              </div>
+            </a> </p>
+          <h4 align="center"><a href="#">Your Purchase Selection</a></h4>
+          <p align="center"> You spent 49% of your income on food last year. The national average is 28%. Consider trying to save money on food. </p>
         </li>
-        <li class="one-fourth video">
-          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto"><img src="img/portfolio/portfolio-img-01.jpg" alt="" width="210" height="145" class="portfolio-img pretty-box"></a> </p>
-          <h4><a href="#">Watch Video</a></h4>
-          <p> Lorem ipsum dolor sit amet, tollite fit manibus individuationis omnibus civitas ad quia. </p>
+        <li class="one-half video">
+          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto">
+            <div id = "chartContainer3">
+            </div>
+          </a> </p>
+          <h4 align="center"><a href="#">How much did you buy?</a></h4>
+          <p align="center"> You bought 20 units of apparel last month. Think long-term with your purchases.</p>
         </li>
-        <li class="one-fourth web">
-          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto"><img src="img/portfolio/portfolio-img-01.jpg" alt="" width="210" height="145" class="portfolio-img pretty-box"></a> </p>
-          <h4><a href="#">Wordpress Master</a></h4>
-          <p> Lorem ipsum dolor sit amet, tollite fit manibus individuationis omnibus civitas ad quia. </p>
+        <li class="one-half web">
+          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto">
+            <div id = "chartContainer4">
+            </div>
+          </a> </p>
+          <h4 align="center"><a href="#">Your Business</a></h4>
+          <p align="center"> Your small business continues to make profit. Keep working on it! </p>
         </li>
-        <li class="one-fourth logos">
-          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto"><img src="img/portfolio/portfolio-img-01.jpg" alt="" width="210" height="145" class="portfolio-img pretty-box"></a> </p>
-          <h4><a href="#">Endless Logo Design</a></h4>
-          <p> Lorem ipsum dolor sit amet, tollite fit manibus individuationis omnibus civitas ad quia. </p>
-        </li>
-        <li class="one-fourth web">
-          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto"><img src="img/portfolio/portfolio-img-01.jpg" alt="" width="210" height="145" class="portfolio-img pretty-box"></a> </p>
-          <h4><a href="#">Worpdress Widgets</a></h4>
-          <p> Lorem ipsum dolor sit amet, tollite fit manibus individuationis omnibus civitas ad quia. </p>
-        </li>
-        <li class="one-fourth web">
-          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto"><img src="img/portfolio/portfolio-img-01.jpg" alt="" width="210" height="145" class="portfolio-img pretty-box"></a> </p>
-          <h4><a href="#">Magento Development</a></h4>
-          <p> Lorem ipsum dolor sit amet, tollite fit manibus individuationis omnibus civitas ad quia. </p>
-        </li>
-        <li class="one-fourth web">
-          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto"><img src="img/portfolio/portfolio-img-01.jpg" alt="" width="210" height="145" class="portfolio-img pretty-box"></a> </p>
-          <h4><a href="#">Joomla Shopping</a></h4>
-          <p> Lorem ipsum dolor sit amet, tollite fit manibus individuationis omnibus civitas ad quia. </p>
-        </li>
-        <li class="one-fourth branding">
-          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto"><img src="img/portfolio/portfolio-img-01.jpg" alt="" width="210" height="145" class="portfolio-img pretty-box"></a> </p>
-          <h4><a href="#">T-Shirts Designs</a></h4>
-          <p> Lorem ipsum dolor sit amet, tollite fit manibus individuationis omnibus civitas ad quia. </p>
-        </li>
-        <li class="one-fourth video">
-          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto"><img src="img/portfolio/portfolio-img-01.jpg" alt="" width="210" height="145" class="portfolio-img pretty-box"></a> </p>
-          <h4><a href="#">Youtube Video</a></h4>
-          <p> Lorem ipsum dolor sit amet, tollite fit manibus individuationis omnibus civitas ad quia. </p>
-        </li>
-        <li class="one-fourth branding">
-          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto"><img src="img/portfolio/portfolio-img-01.jpg" alt="" width="210" height="145" class="portfolio-img pretty-box"></a> </p>
-          <h4><a href="#">Brand Everything</a></h4>
-          <p> Lorem ipsum dolor sit amet, tollite fit manibus individuationis omnibus civitas ad quia. </p>
-        </li>
-        <li class="one-fourth video">
-          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto"><img src="img/portfolio/portfolio-img-01.jpg" alt="" width="210" height="145" class="portfolio-img pretty-box"></a> </p>
-          <h4><a href="#">Another Video</a></h4>
-          <p> Lorem ipsum dolor sit amet, tollite fit manibus individuationis omnibus civitas ad quia. </p>
-        </li>
+
       </ul>
       <!--END ul-->
     </div>
@@ -161,6 +560,13 @@
   </div>
   <div style="clear:both; height: 40px"></div>
 </div>
+    </section>
+
+    <div class="att-m2x-widget" data-widget-url="http://api-m2x.att.com/v2/widgets/6d0c5350" data-width="400" data-height="260" data-type="sum" data-m2x-key="d0f237c00a15b8624ab4a527656387e5">
+        
+    </div>
+<!-- Include the following script tag only once per page -->
+<script src="https://m2x.att.com/widgets.js" async></script>
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>

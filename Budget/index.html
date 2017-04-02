@@ -37,78 +37,8 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script type="text/javascript">
-  FusionCharts.ready(function(){
-    var revenueChart = new FusionCharts({
-        "type": "column2d",
-        "renderAt": "chartContainer",
-        "width": "210",
-        "height": "145",
-        "dataFormat": "json",
-        "dataSource":  {
-          "chart": {
-            "caption": "Monthly revenue for last year",
-            "subCaption": "Harry's SuperMart",
-            "xAxisName": "Month",
-            "yAxisName": "Revenues (In USD)",
-            "theme": "fint"
-         },
-         "data": [
-            {
-               "label": "Jan",
-               "value": "420000"
-            },
-            {
-               "label": "Feb",
-               "value": "810000"
-            },
-            {
-               "label": "Mar",
-               "value": "720000"
-            },
-            {
-               "label": "Apr",
-               "value": "550000"
-            },
-            {
-               "label": "May",
-               "value": "910000"
-            },
-            {
-               "label": "Jun",
-               "value": "510000"
-            },
-            {
-               "label": "Jul",
-               "value": "680000"
-            },
-            {
-               "label": "Aug",
-               "value": "620000"
-            },
-            {
-               "label": "Sep",
-               "value": "610000"
-            },
-            {
-               "label": "Oct",
-               "value": "490000"
-            },
-            {
-               "label": "Nov",
-               "value": "900000"
-            },
-            {
-               "label": "Dec",
-               "value": "730000"
-            }
-          ]
-      }
-
-  });
-revenueChart.render();
-})
-</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script data-main="lib/capital_one" src="lib/require-jquery.js"></script>
 
 </head>
 
@@ -148,7 +78,7 @@ revenueChart.render();
             <div class="header-content-inner">
                 <h1 id="homeHeading">Budget Time to Fix your Budget</h1>
                 <p>Keep track of the money you spend whenever you browse the web!</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Start Now</a>
+                <a href="./login.html" class="btn btn-primary btn-xl page-scroll">Start Now</a>
             </div>
         </div>
     </header>
@@ -161,83 +91,6 @@ revenueChart.render();
                     <hr class="light">
                     <p class="text-faded">Budgeter has everything you need to make responsible financial decisions!</p>
                     <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Learn more</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div id="container">
-  <div id="portfolio">
-    <!--END filtering-nav-->
-    <div class="portfolio-container" id="columns">
-        <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 color="green" class="section-heading">Your data</h2>
-                    <hr>
-                </div>
-            </div>
-      <ul>
-        <li class="one-half web">
-          <p> <a title="Caption Text" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto">
-            <div id = "chartContainer">
-                 <img src="img/portfolio/portfolio-img-01.jpg" alt="" width="210" height="145" class="portfolio-img pretty-box">
-            </div>
-          </a> </p>
-          <h4><a href="#">Worpdress Design</a></h4>
-          <p> Lorem ipsum dolor sit amet, tollite fit manibus individuationis omnibus civitas ad quia. </p>
-        </li>
-        <li class="one-half logos">
-          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto"><img src="img/portfolio/portfolio-img-01.jpg" alt="" width="210" height="145" class="portfolio-img pretty-box"></a> </p>
-          <h4><a href="#">Logo Design</a></h4>
-          <p> Lorem ipsum dolor sit amet, tollite fit manibus individuationis omnibus civitas ad quia. </p>
-        </li>
-        <li class="one-half video">
-          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto"><img src="img/portfolio/portfolio-img-01.jpg" alt="" width="210" height="145" class="portfolio-img pretty-box"></a> </p>
-          <h4><a href="#">Watch Video</a></h4>
-          <p> Lorem ipsum dolor sit amet, tollite fit manibus individuationis omnibus civitas ad quia. </p>
-        </li>
-        <li class="one-half web">
-          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto"><img src="img/portfolio/portfolio-img-01.jpg" alt="" width="210" height="145" class="portfolio-img pretty-box"></a> </p>
-          <h4><a href="#">Wordpress Master</a></h4>
-          <p> Lorem ipsum dolor sit amet, tollite fit manibus individuationis omnibus civitas ad quia. </p>
-        </li>
-        <li class="one-half logos">
-          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto"><img src="img/portfolio/portfolio-img-01.jpg" alt="" width="210" height="145" class="portfolio-img pretty-box"></a> </p>
-          <h4><a href="#">Endless Logo Design</a></h4>
-          <p> Lorem ipsum dolor sit amet, tollite fit manibus individuationis omnibus civitas ad quia. </p>
-        </li>
-        <li class="one-half web">
-          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto"><img src="img/portfolio/portfolio-img-01.jpg" alt="" width="210" height="145" class="portfolio-img pretty-box"></a> </p>
-          <h4><a href="#">Worpdress Widgets</a></h4>
-          <p> Lorem ipsum dolor sit amet, tollite fit manibus individuationis omnibus civitas ad quia. </p>
-        </li>
-        <li class="one-half web">
-          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto"><img src="img/portfolio/portfolio-img-01.jpg" alt="" width="210" height="145" class="portfolio-img pretty-box"></a> </p>
-          <h4><a href="#">Magento Development</a></h4>
-          <p> Lorem ipsum dolor sit amet, tollite fit manibus individuationis omnibus civitas ad quia. </p>
-        </li>
-        <li class="one-half web">
-          <p> <a title="" href="img/demo/slide_2.jpg" class="portfolio-item-preview" data-rel="prettyPhoto"><img src="img/portfolio/portfolio-img-01.jpg" alt="" width="210" height="145" class="portfolio-img pretty-box"></a> </p>
-          <h4><a href="#">Joomla Shopping</a></h4>
-          <p> Lorem ipsum dolor sit amet, tollite fit manibus individuationis omnibus civitas ad quia. </p>
-        </li>
-
-      </ul>
-      <!--END ul-->
-    </div>
-    <!--END portfolio-wrap-->
-  </div>
-  <div style="clear:both; height: 40px"></div>
-</div>
-    </section>
-
-        <section class="bg-primary" id="filler">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">It's never too late to start making responsible decisions</h2>
-                    <hr class="light">
                 </div>
             </div>
         </div>
